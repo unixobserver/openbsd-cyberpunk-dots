@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Prints the current volume or 🔇 if muted.
+
+
+[ $(sndioctl | grep output.mute=1)  ] && echo 🔇 && exit
+
+vol="$(sndioctl | grep output.level )"  && echo 🔊"$vol"
+
+
