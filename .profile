@@ -14,8 +14,10 @@ export PATH HOME TERM EDITOR BROWSER SCRIPTDIR
 export ENV=$HOME/.kshrc
 export LANG=en_US.UTF-8
 TERM=vt100
+#. "$HOME/.cargo/env"
 export PKG_PATH=https://ftp.openbsd.org/pub/OpenBSD/snapshots/packages/amd64/
-
+export FFF_FILE_ICON=1
+#export FFF_DISPLAY_ICON="I"
 xinit -- -nolisten tcp
 
 #[ "$(tty)" = "/dev/ttyv0" ]  && exec x >/dev/null 2>&1 
