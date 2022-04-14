@@ -13,40 +13,40 @@
 
 [global]
     #font = Spleen 32x64 Medium 24 
-    font = Terminus 14
+    font = Spleen, Symbola 14
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
-    indicate_hidden = no
+    indicate_hidden = yes
     alignment = center
-    bounce_freq = 0
     show_age_threshold = -1
     word_wrap = yes
-    ignore_newline = no
-    geometry = "500x40-30+30"
+    ignore_newline = yes
+    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
     shrink = no
-    transparency = 10
-    idle_threshold = 40
+    transparency = 0
+    idle_threshold = 0
     monitor = 0
     follow = mouse
     sticky_history = no
-    history_length = 10
+    history_length = 0
     show_indicators = yes
     line_height = 4
-    separator_height = 10
-    padding = 7
+    separator_height = 0
+    padding = 18
+    stack_duplicates = true
+    hide_duplicate_count = true
     horizontal_padding = 0
-    separator_color = frame
-    startup_notification = false
+    separator_color = "#000000"
     dmenu = /usr/local/bin/dmenu -p dunst:
-    browser = /usr/bin/qutebrowser
+    browser = /usr/bin/google-chrome-stable
     icon_position = off
-    icon_path = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
-    frame_width = 1
+    frame_width = 0
 	corner_radius = 0
 	Class = Dunst
   
-frame_color = "#333333"
+frame_color = "#000000"
+
 separator_color= frame
 
 [urgency_low]

@@ -1,8 +1,8 @@
-sw_volume: 84
+sw_volume: 82
 audio_device_state:1:sndio audio
 state: pause
-current: 64
-time: 121.994000
+current: 50
+time: 79.608000
 random: 0
 repeat: 1
 single: 0

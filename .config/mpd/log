@@ -6239,3 +6239,92 @@ Apr 03 02:54 : player: played "November Növelet/Unintended By Nature/Rules Of Ag
 Apr 03 02:55 : config: inotify: auto_update was disabled. enable during compilation phase
 Apr 03 04:10 : player: played "November Növelet/Unintended By Nature/Rules Of Agony.mp3"
 Apr 03 10:41 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 13 20:21 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 13 20:21 : exception: Failed to decode /home/myst/Music/November Növelet/Unintended By Nature/Rules Of Agony.mp3; Failed to open '/home/myst/Music/November Növelet/Unintended By Nature/Rules Of Agony.mp3': No such file or directory
+Apr 13 20:21 : player: played "November Növelet/Unintended By Nature/Rules Of Agony.mp3"
+Apr 13 21:23 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:27 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:27 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:27 : player: played "November Növelet/The World In Devotion/Made Of Gold.mp3"
+Apr 13 21:33 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:33 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:33 : player: played "November Növelet/The World In Devotion/Restless.mp3"
+Apr 13 21:37 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:37 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:37 : player: played "November Növelet/The World In Devotion/The World In Devotion.mp3"
+Apr 13 21:40 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:40 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:41 : player: played "November Növelet/Unintended By Nature/Bloody November.mp3"
+Apr 13 21:45 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:45 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:45 : player: played "November Növelet/Unintended By Nature/Blossoms of Death.mp3"
+Apr 13 21:49 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:49 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:49 : player: played "November Növelet/Unintended By Nature/Dancing Queen.mp3"
+Apr 13 21:52 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:52 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:52 : player: played "November Növelet/Unintended By Nature/Death Singer.mp3"
+Apr 13 21:56 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 21:56 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 21:56 : player: played "November Növelet/Unintended By Nature/Dying Truth.mp3"
+Apr 13 21:59 : output: Failed to play on "sndio audio" (sndio): sndio write failed
+Apr 13 21:59 : exception: Failed to open audio output
+Apr 13 21:59 : player: played "November Növelet/Unintended By Nature/Heart Of Stone.mp3"
+Apr 13 22:00 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 13 22:48 : player: played "November Növelet/Unintended By Nature/Heart Of Stone.mp3"
+Apr 13 22:49 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 13 22:51 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 22:53 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 22:57 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 13 22:57 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 13 22:58 : player: played "November Növelet/The World In Devotion/The World In Devotion.mp3"
+Apr 14 01:01 : player: played "November Növelet/Unintended By Nature/Bloody November.mp3"
+Apr 14 07:52 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 14 08:15 : player: played "November Növelet/Unintended By Nature/Bloody November.mp3"
+Apr 14 18:32 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 14 20:46 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 20:46 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 20:50 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 20:50 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 20:50 : player: played "November Növelet/Unintended By Nature/Dancing Queen.mp3"
+Apr 14 20:52 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 20:52 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 20:53 : player: played "November Növelet/Unintended By Nature/Death Singer.mp3"
+Apr 14 20:56 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 20:56 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 20:57 : player: played "November Növelet/Unintended By Nature/Dying Truth.mp3"
+Apr 14 21:01 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:01 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:01 : player: played "November Növelet/Unintended By Nature/Heart Of Stone.mp3"
+Apr 14 21:02 : output: Failed to play on "sndio audio" (sndio): sndio write failed
+Apr 14 21:02 : exception: Failed to open audio output
+Apr 14 21:02 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:06 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:06 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:06 : player: played "November Növelet/Magic/So Far No Further.mp3"
+Apr 14 21:10 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:10 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:10 : player: played "November Növelet/Magic/Street Of Lost Hearts.mp3"
+Apr 14 21:14 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:14 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:14 : player: played "November Növelet/The World In Devotion/Always.mp3"
+Apr 14 21:16 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:16 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:16 : player: played "November Növelet/The World In Devotion/Be Grateful To Your Murderer.mp3"
+Apr 14 21:21 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:21 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:21 : player: played "November Növelet/The World In Devotion/Crying Walls.mp3"
+Apr 14 21:24 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:24 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:25 : player: played "November Növelet/The World In Devotion/Don't Know Why I Love You.mp3"
+Apr 14 21:29 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 21:29 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 21:29 : player: played "November Növelet/The World In Devotion/Fire.mp3"
+Apr 14 22:17 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 22:21 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Apr 14 22:21 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Apr 14 22:21 : player: played "November Növelet/The World In Devotion/Don't Know Why I Love You.mp3"
+Apr 14 22:24 : exception: Failed to open /home/myst/.config/mpd/playlists: No such file or directory
+Apr 14 23:12 : player: played "November Növelet/The World In Devotion/Fire.mp3"
+Apr 14 23:13 : config: inotify: auto_update was disabled. enable during compilation phase
+Apr 14 23:50 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
