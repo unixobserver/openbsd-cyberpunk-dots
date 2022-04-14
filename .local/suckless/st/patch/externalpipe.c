@@ -1,11 +1,7 @@
 int extpipeactive = 0;
 
 void
-#if EXTERNALPIPEIN_PATCH
 extpipe(const Arg *arg, int in)
-#else
-externalpipe(const Arg *arg)
-#endif // EXTERNALPIPEIN_PATCH
 {
 	int to[2];
 	char buf[UTF_SIZ];
@@ -25,11 +21,9 @@ externalpipe(const Arg *arg)
 		dup2(to[0], STDIN_FILENO);
 		close(to[0]);
 		close(to[1]);
-		#if EXTERNALPIPEIN_PATCH
 		if (in)
 			dup2(csdfd, STDOUT_FILENO);
 		close(csdfd);
-		#endif // EXTERNALPIPEIN_PATCH
 		execvp(((char **)arg->v)[0], (char **)arg->v);
 		fprintf(stderr, "st: execvp %s\n", ((char **)arg->v)[0]);
 		perror("failed");
@@ -63,7 +57,6 @@ externalpipe(const Arg *arg)
 	extpipeactive = 1;
 }
 
-#if EXTERNALPIPEIN_PATCH
 void
 externalpipe(const Arg *arg) {
 	extpipe(arg, 0);
@@ -73,4 +66,3 @@ void
 externalpipein(const Arg *arg) {
 	extpipe(arg, 1);
 }
-#endif // EXTERNALPIPEIN_PATCH

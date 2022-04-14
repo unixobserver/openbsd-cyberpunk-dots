@@ -5,17 +5,17 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static unsigned int borderpx  = 1;        /* border pixel of windows */
+static unsigned int borderpx  = 0;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
-static unsigned int gappih    =  0;       /* horiz inner gap between windows */
-static unsigned int gappiv    =  0;       /* vert inner gap between windows */
-static unsigned int gappoh    =  0;       /* horiz outer gap between windows and screen edge */
-static unsigned int gappov    =  0;       /* vert outer gap between windows and screen edge */
+static unsigned int gappih    =  20;       /* horiz inner gap between windows */
+static unsigned int gappiv    =  20;       /* vert inner gap between windows */
+static unsigned int gappoh    =  20;       /* horiz outer gap between windows and screen edge */
+static unsigned int gappov    =  20;       /* vert outer gap between windows and screen edge */
 static int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
-static int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
+static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 0;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "Spleen:size=16", "Symbola:pixelsize=16:antialias=true:autohint=true"  };
+static char *fonts[]          = { "Spleen:size=14", "Symbola:pixelsize=16:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#000000";
 static char normbordercolor[]       = "#222222";
 static char normfgcolor[]           = "#D9E0EE";
@@ -152,7 +152,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
-	{ MODKEY,			XK_grave,	spawn,	SHCMD("dmenuunicode") },
+	{ MODKEY,			XK_grave,	spawn,	SHCMD("scrot 'void_%d-%m-%Y_$wx$h.png'") },
 	TAGKEYS(			XK_1,		0)
 	TAGKEYS(			XK_2,		1)
 	TAGKEYS(			XK_3,		2)
@@ -175,7 +175,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_w,		spawn,		SHCMD("chrome") },
 	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e fff") },
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("pcmanfm") },
-	{ MODKEY,			XK_i,		spawn,		SHCMD("doas st -e htop") },
+	{ MODKEY,			XK_i,		spawn,		SHCMD("st -e htop") },
 	{ MODKEY|ShiftMask,		XK_i,		spawn,		SHCMD(TERMINAL " -e top") },
 	{ MODKEY,			XK_o,		spawn,		SHCMD(TERMINAL " -e orca") },
 	{ MODKEY|ShiftMask,		XK_o,		spawn,		SHCMD("lmms") },
@@ -195,11 +195,13 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("wall-select") },
 	{ MODKEY,			XK_backslash,		view,		{0} },
 	{ MODKEY,			XK_p,		spawn,		SHCMD("nsxiv -b -t ~/Pictures/* ") },
-	{ MODKEY|ShiftMask,		XK_p,		spawn,		SHCMD("st -e cmixer") },
+	{ MODKEY|ShiftMask,		XK_p,		spawn,		SHCMD("st -e cmixer; kill -44 $(pidof dwmblocks)") },
+
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	{ MODKEY,			XK_d,	        spawn,      SHCMD("dmenu_run") },
+	{ MODKEY|ShiftMask,	XK_d,			spawn,		SHCMD("st -e ncdu") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
@@ -214,32 +216,40 @@ static Key keys[] = {
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	{ MODKEY,			XK_b,		togglebar,	{0} },
-	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("mpv ~/Videos/movies") }, 
+	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("movies") }, 
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e vim ~/Documents/notes/notes.md") },
-	{ MODKEY,			XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat") },
+	{ MODKEY,			XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD("st -e ncmpcpp") },
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = +1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
 	{ MODKEY,			XK_F1,		spawn,		SHCMD("mpv  ~/Videos/movies") },
-	{ MODKEY,			XK_F5,		spawn,          SHCMD("doas mount /dev/sd2i ~/.usb & st -e fff ~/.usb & notify-send 'usb mount' ") },
+	{ MODKEY,			XK_F5,		spawn,          SHCMD("doas mount /dev/sd1i ~/.usb & st -e fff ~/.usb & notify-send 'usb mount' ") },
 	{ MODKEY|ShiftMask,		XK_F5,		spawn,          SHCMD("doas umount ~/.usb  && notify-send 'usb unmount' ") },
 	{ MODKEY,			XK_F6,		spawn,		SHCMD("st -e rec") },
 	{ MODKEY,			XK_F7,		spawn,		SHCMD("st -e killrec") },
-	{ MODKEY,			XK_F8,		spawn,		SHCMD("st -e | curl wttr.in/piraeus") },
+	{ MODKEY,			XK_F8,		spawn,		SHCMD("") },
 	{ MODKEY,			XK_space,	zoom,		{0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
-
+        { MODKEY|ShiftMask,		XK_F12,	tagmon,		{.i = +1 } },
+        { MODKEY,		        XK_F12,	focusmon,	{.i = +1 } },
 };
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-#ifdef __OpenBSD__
+#ifndef __OpenBSD__
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+        { ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
+	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
+	{ ClkStatusText,        0,              Button3,        sigdwmblocks,   {.i = 3} },
+	{ ClkStatusText,        0,              Button4,        sigdwmblocks,   {.i = 4} },
+	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
+	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
+{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e vim ~/.local/suckless/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        defaultgaps,	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
@@ -253,4 +263,3 @@ static Button buttons[] = {
 	{ ClkTagBar,		0,		Button5,	shiftview,	{.i = 1} },
 	{ ClkRootWin,		0,		Button2,	togglebar,	{0} },
 };
-

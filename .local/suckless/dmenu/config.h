@@ -6,7 +6,7 @@ static int centered = 1;                    /* -c option; centers dmenu on scree
 static int min_width = 300;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Spleen:size=15:antialias=true:autohint=true",
+	"Spleen:size=14:antialias=true:autohint=true",
 	"Noto Color Emoji:size=18:antialias=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
@@ -29,4 +29,4 @@ static unsigned int min_lineheight = 8;
 static const char worddelimiters[] = " ";
 
 /* Size of the window border */
-static const unsigned int border_width = 1;
+static const unsigned int border_width = 0;

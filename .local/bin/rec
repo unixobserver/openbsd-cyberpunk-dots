@@ -4,15 +4,16 @@
 #    -codec:a pcm_s16le \
 notify-send "Recording" &
 videoName=$(date +"%m_%d_%M_%Y")
-audioName=$(date +"%m_%d_%M_%Y")
 
 
-aucat -f snd/0.mon -o /home/myst/Videos/$audioName.wav &
 
 ffmpeg -y \
-	-f x11grab -thread_queue_size 32 \
+	-f x11grab -thread_queue_size 1024 \
+	-framerate 30 \
+	-probesize 128M  \
 	-s 1920x1080 -r 30 -i +0,0 \
-        -codec:v libx264rgb -crf 0 -preset ultrafast \
-	/home/myst/Videos/$videoName.mkv 
+	-f sndio  -thread_queue_size 1024  -i snd/0.mon \
+	-r 30 \
+        -codec:v h264 -crf 0 -preset ultrafast -c:a aac \
+	/home/myst/Videos/$videoName.mp4 
 
-#ffplay -f v4l2  -video_size 1920x1080 -i /home/myst/Videos/$videoName.mkv  &

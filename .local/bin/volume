@@ -5,6 +5,6 @@
 
 [ $(sndioctl | grep output.mute=1)  ] && echo 🔇 && exit
 
-vol="$(sndioctl | grep output.level )"  && echo 🔊"$vol"
+vol="$(sndioctl -n output.level | xargs -I % bc -e 'scale=1; (100 * %)/1')"  && echo 🔊"$vol"
 
 

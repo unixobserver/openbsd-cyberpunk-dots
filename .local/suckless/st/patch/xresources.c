@@ -35,22 +35,14 @@ resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst)
 }
 
 void
-#if XRESOURCES_RELOAD_PATCH
 config_init(Display *dpy)
-#else
-config_init(void)
-#endif // XRESOURCES_RELOAD_PATCH
 {
 	char *resm;
 	XrmDatabase db;
 	ResourcePref *p;
 
 	XrmInitialize();
-	#if XRESOURCES_RELOAD_PATCH
 	resm = XResourceManagerString(dpy);
-	#else
-	resm = XResourceManagerString(xw.dpy);
-	#endif // XRESOURCES_RELOAD_PATCH
 	if (!resm)
 		return;
 
@@ -59,7 +51,6 @@ config_init(void)
 		resource_load(db, p->name, p->type, p->dst);
 }
 
-#if XRESOURCES_RELOAD_PATCH
 void
 reload_config(int sig)
 {
@@ -76,4 +67,3 @@ reload_config(int sig)
 	}
 	signal(SIGUSR1, reload_config);
 }
-#endif // XRESOURCES_RELOAD_PATCH
