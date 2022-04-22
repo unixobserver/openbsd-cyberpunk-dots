@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE lmms-config-file>
+<lmms version="1.2.2">
+  <MidiJack device="lmms"/>
+  <app disablebackup="0" nomsgaftersetup="0" configured="1" openlastproject="0" nanhandler="1" language="en" displaydbfs="0" nommpz="0"/>
+  <audiojack channels="2" clientname="lmms"/>
+  <audioportaudio backend="" device=""/>
+  <audiosndio channels="2" device=""/>
+  <mixer audiodev="sndio" hqaudio="0" framesperaudiobuffer="256" mididev="sndio MIDI"/>
+  <paths workingdir="/home/myst/Documents/lmms/" laddir="/home/myst/Documents/lmms/plugins/ladspa/" sf2dir="/home/myst/Documents/lmms/samples/soundfonts/" backgroundartwork="" vstdir="/home/myst/Documents/lmms/plugins/vst/" artwork="/home/myst/Documents/lmms/themes/cyberpunk_lmms/" defaultsf2="" gigdir="/home/myst/Documents/lmms/samples/gig/"/>
+  <tooltips disabled="0"/>
+  <ui oneinstrumenttrackwindow="0" enableautosave="1" compacttrackbuttons="0" smoothscroll="0" printnotelabels="0" vstembedmethod="qt" animateafp="1" disableautoquit="1" enablerunningautosave="0" saveinterval="2" vstalwaysontop="0" displaywaveform="0" syncvstplugins="1"/>
+  <recentfiles>
+    <file path="/home/myst/Documents/lmms/projects/df.mmpz"/>
+    <file path="data:/projects/templates/default.mpt"/>
+  </recentfiles>
+</lmms>

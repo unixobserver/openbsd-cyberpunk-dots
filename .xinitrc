@@ -17,6 +17,6 @@ dunst &
 ### SETTING WALLPAPER ###
 xsetroot -solid black &
 . ~/.fehbg &
-st &
+#st &
 exec dwm
 

@@ -9,15 +9,14 @@ export TERMINAL=st
 export EDITOR=nvim
 export BROWSER=chrome
 export FFF_OPENER=opener
-PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
+PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.local/bin/sysutils:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 export PATH HOME TERM EDITOR BROWSER SCRIPTDIR
 export ENV=$HOME/.kshrc
 export LANG=en_US.UTF-8
 TERM=vt100
 #. "$HOME/.cargo/env"
-export PKG_PATH=https://ftp.openbsd.org/pub/OpenBSD/snapshots/packages/amd64/
+#export PKG_PATH=https://ftp.openbsd.org/pub/OpenBSD/snapshots/packages/amd64/
 export FFF_FILE_ICON=1
-#export FFF_DISPLAY_ICON="I"
 xinit -- -nolisten tcp
 
 #[ "$(tty)" = "/dev/ttyv0" ]  && exec x >/dev/null 2>&1 
