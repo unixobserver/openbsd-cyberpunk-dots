@@ -1,7 +1,7 @@
 # openbsd-cyberpunk-dots
 My personal configuration for OpenBSD. Ultra minimal and full black!!
 
-![openbsd](bsd.png)
+![openbsd](bsd.jpg)
 
 1. You will need a OpenBSD installation.
 2. Clone the repo as user in to your home dir: `git clone https://github.com/unixobserver/openbsd-cyberpunk-dots.git` 
